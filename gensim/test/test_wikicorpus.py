@@ -12,6 +12,7 @@ Automated tests for checking the WikiCorpus
 import os
 import sys
 import types
+import sys
 import unittest
 
 from gensim.corpora.wikicorpus import WikiCorpus
@@ -22,6 +23,7 @@ datapath = lambda fname: os.path.join(module_path, 'test_data', fname)
 FILENAME = 'enwiki-latest-pages-articles1.xml-p000000010p000030302-shortened.bz2'
 
 
+@unittest.skipIf(sys.version_info.major == 2 and sys.version_info.minor < 7, "Not supported in python < 2.7")
 class TestWikiCorpus(unittest.TestCase):
 
     def setUp(self):

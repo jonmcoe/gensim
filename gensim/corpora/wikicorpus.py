@@ -15,6 +15,8 @@ tokenizer). The package is available at https://github.com/clips/pattern .
 
 See scripts/process_wiki.py for a canned (example) script based on this
 module.
+
+Note: not supported for python versions earlier than 2.7
 """
 
 
